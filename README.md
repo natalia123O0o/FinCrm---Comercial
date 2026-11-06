@@ -69,20 +69,5 @@ El proyecto **no incluye backend de contacto**. El formulario abre el programa d
 2. Define `VITE_CONTACT_EMAIL=tu-correo-real@dominio.com`.
 3. Reinicia `npm run dev`.
 
-Si no configuras el correo, el formulario ofrece copiar el mensaje en vez de fingir que se envió.
 
-**Nota:** La variable `VITE_` es pública en el navegador. Úsala solo para correo público, nunca para contraseñas, API keys ni JWT.
 
-## 6. Cambiar precios y textos
-
-Abre `src/data/content.js`. Allí están los arreglos `plans`, `modules`, `benefits` y las cifras de demostración del panel (`dashboardData`). Por ejemplo, `price: 79900` determina el precio del plan Negocio.
-
-El dashboard incluye **datos ficticios** para presentar el mockup, y los precios son **propuestos**, no costos o ventas validadas. Esto se indica claramente en la interfaz.
-
-## 7. Usar en FinCRM existente
-
-Esta carpeta es una **landing independiente**, no reemplaza el backend Node/Express ni la autenticación JWT de FinCRM.
-
-Si tu proyecto actual ya tiene frontend Vite + React, copia los componentes, datos y estilos a su `src/` y monta `<App />` en la ruta pública deseada (por ejemplo `/`). Evita sobrescribir sin copia tu `App.jsx`, las rutas y el `package.json` actuales. Instala `motion` y `lucide-react` en ese frontend si aún no están.
-
-Antes de publicar una landing comercial real revisa: datos de contacto, impuestos y tarifas finales, disponibilidad de FinPOS y FinRadar, textos legales y política de tratamiento de datos.
