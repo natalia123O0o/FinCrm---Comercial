@@ -1,0 +1,61 @@
+/* ============================================================
+   FinCRM — Design Tokens
+   Paleta exacta del brief + tipografía + escalas
+   ============================================================ */
+:root {
+  /* — Paleta exacta — */
+  --navy-900: #0A2540;
+  --navy-800: #0D2E4F;
+  --petrol-700: #0E4C5C;
+  --petrol-500: #14708A;
+  --white: #FFFFFF;
+  --gray-50: #F7F9FB;
+  --gray-200: #E3E8EE;
+  --gray-500: #6B7A8F;
+  --gray-700: #334155;
+  --orange-500: #FF7A1A;
+  --orange-400: #FF9647;
+  --green-500: #16A34A;
+  --red-500: #DC2626;
+
+  /* — Tipografía — */
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* — Escala tipográfica desktop — */
+  --fs-h1: 64px;
+  --lh-h1: 1.05;
+  --fs-h2: 40px;
+  --lh-h2: 1.15;
+  --fs-h3: 24px;
+  --lh-h3: 1.3;
+  --fs-body: 18px;
+  --lh-body: 1.6;
+  --fs-small: 14px;
+  --lh-small: 1.5;
+  --fs-micro: 12px;
+  --lh-micro: 1.4;
+
+  /* — Radios — */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* — Sombras — */
+  --shadow-sm: 0 1px 2px rgba(10, 37, 64, 0.06);
+  --shadow-md: 0 8px 24px rgba(10, 37, 64, 0.08);
+  --shadow-lg: 0 24px 64px rgba(10, 37, 64, 0.16);
+  --shadow-orange: 0 8px 20px rgba(255, 122, 26, 0.25);
+
+  /* — Layout — */
+  --container: 1200px;
+  --pad-x: 24px;
+  --section-y: 96px;
+  --section-y-mobile: 64px;
+  --gutter: 24px;
+
+  /* — Easing — */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

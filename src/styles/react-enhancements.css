@@ -1,0 +1,98 @@
+/* Adaptaciones de la versión React: mantiene la paleta y los estilos originales. */
+html { scroll-padding-top: 78px; }
+section[id] { scroll-margin-top: 74px; }
+.scroll-progress {
+  position: fixed; inset: 0 0 auto; height: 3px;
+  z-index: 110; transform-origin: 0 50%; background: var(--orange-500);
+  pointer-events: none;
+}
+.nav__links { gap: clamp(12px, 1.65vw, 28px); }
+.nav__links > a { font-size: 14px; }
+.nav__links > .btn-primary { color: var(--navy-900); }
+.hero__trust { font-size: 10px; }
+.hero__dashboard { min-width: 0; }
+.dash-demo-label {
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  padding: 9px 16px; text-align: center; font: 500 9px/1.3 var(--font-mono);
+  color: rgba(255, 255, 255, .43); letter-spacing: .1em;
+}
+.dash__body { min-height: 400px; }
+.dash__tab[aria-selected="true"] { color: var(--white); }
+.integration__node svg { display: block; stroke-width: 1.8; }
+.problem-title {
+  color: var(--white); font-size: 34px; line-height: 1.2;
+  letter-spacing: -.01em; max-width: 440px;
+}
+.solution-title { color: var(--white); font-size: 26px; font-weight: 600; margin-bottom: 8px; }
+.sample-note, .availability-note {
+  font-size: 12px; color: var(--gray-500);
+  line-height: 1.55; text-align: center;
+}
+.sample-note { margin-top: 12px; color: rgba(255,255,255,.5); }
+.availability-note { margin-top: 30px; }
+.module-card .module-icon svg, .why-card .why-icon { stroke: currentColor; }
+.module-card .module-icon { color: var(--accent); }
+.module-card .module-link svg { flex: none; }
+.module-card, .price-card, .pricing-why__card, .why-card { will-change: transform; }
+.why-card--wide { display: flex; align-items: center; gap: 16px; }
+.why-card--wide .why-icon { flex-shrink: 0; margin: 0; }
+.why-card--wide h3 { margin-bottom: 6px; }
+.contact-layout {
+  display: grid; grid-template-columns: 1.05fr .95fr;
+  gap: clamp(36px, 7vw, 100px); align-items: center;
+  position: relative; z-index: 1; text-align: left;
+}
+.contact-copy h2 { color: var(--white); margin-bottom: 22px; }
+.contact-copy p:not(.eyebrow) {
+  font-size: 18px; line-height: 1.6; color: rgba(255,255,255,.8); margin-bottom: 30px;
+}
+.contact-card {
+  color: var(--gray-700); background: var(--white); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg); padding: clamp(24px, 4vw, 38px);
+}
+.contact-card h3 { font-size: 23px; margin-bottom: 22px; }
+.contact-card label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 7px; }
+.contact-card input, .contact-card select, .contact-card textarea {
+  display: block; width: 100%; margin-bottom: 18px; font: 400 15px/1.5 var(--font-body);
+  color: var(--navy-900); background: var(--gray-50); border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm); padding: 12px 13px;
+}
+.contact-card textarea { resize: vertical; min-height: 76px; }
+.contact-card input:focus, .contact-card select:focus, .contact-card textarea:focus {
+  border-color: var(--orange-500); outline: 2px solid rgba(255,122,26,.18);
+}
+.contact-card .btn { white-space: normal; }
+.contact-card .contact-footnote, .contact-card .contact-status {
+  color: var(--gray-500); font-size: 12px; line-height: 1.5;
+  margin: 12px 0 0; text-align: left;
+}
+.contact-card .contact-status { color: var(--petrol-700); font-weight: 600; }
+@media(max-width: 1100px) {
+  .nav__links { gap: 12px; }
+  .nav__links > a { font-size: 12px; }
+}
+@media(max-width: 1023px) {
+  .contact-layout { grid-template-columns: 1fr; max-width: 740px; }
+  .dash__body { min-height: auto; }
+}
+@media(max-width: 767px) {
+  .nav__links > a { font-size: 16px; }
+  .contact-layout { gap: 36px; }
+  .contact-copy h2 { font-size: 30px; }
+  .problem-title { font-size: 28px; }
+  .solution-panel { padding: 16px; }
+  .solution-panel .kpi-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); overflow: visible; }
+  .solution-panel .kpi-card { min-width: 0; }
+  .solution-panel .kpi-value { font-size: 18px; }
+}
+@media(max-width: 450px) {
+  .dash__tab { padding: 6px 5px; }
+  .dash__logo { font-size: 12px; }
+  .table-header, .table-row { font-size: 9px; gap: 4px; }
+  .table-row .mono { font-size: 9px; }
+  .badge { font-size: 9px; padding: 3px 5px; }
+  .contact-card { padding: 20px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .module-card, .price-card, .pricing-why__card, .why-card { will-change: auto; }
+}
